@@ -1,0 +1,34 @@
+#inicializar y subir el proyecto
+git config --global user.name "TuNombre"
+git config --global user.email "tu-correo@ejemplo.com"
+git config --list
+git init
+git add .
+git commit -m "Descripción inicial del proyecto"
+git remote add origin URL_DEL_REPOSITORIO
+git push -u origin main
+
+#clonar el proyecto en local
+git clone URL_DEL_REPOSITORIO
+//tener en cuenta si el repositorio
+ es privado o publico, en caso de ser
+ privado hay que crear un token :
+ Perfil/Settings/Developer Settings/Personal Acces Token/Fine- grained token
+
+#gestion de ramas
+//crear nueva rama : git branch nombre-de-la-rama
+//cambiar a una rama especifica: git checkout nombre-de-la-rama
+//Crear y cambiar de rama en un solo paso: git checkout -b nombre-de-la-rama
+//Listar todas las ramas locales: git branch
+
+#fusion de cambios
+//Regresar a la rama principal: git checkout main
+//Traer los cambios de la rama secundaria: git merge nombre-de-la-rama
+//Borrar la rama secundaria (opcional): git branch -d nombre-de-la-rama
+
+#flujos de trabajo diario
+//Revisar qué archivos han sido modificados	git status
+//Bajar cambios recientes del servidor:	git pull origin main
+//Ver historial de commits resumido:	git log --oneline
+//Enviar cambios locales al servidor:	git push origin nombre-de-la-rama
+//Descartar cambios locales de un archivo:	git checkout -- nombre-del-archivo
